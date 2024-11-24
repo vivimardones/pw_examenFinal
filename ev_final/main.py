@@ -26,5 +26,23 @@ def ejercicio1():
         return render_template('ejercicio1.html',total=total, name=name, valorTarros=valorTarros, descuento=descuento)
     return render_template('ejercicio1.html')
 
+@app.route('/ejercicio2', methods=['GET', 'POST'])
+def ejercicio2():
+    if request.method == 'POST':
+        usuario = str(request.form['usuario'])
+        contraseña = str(request.form['contraseña'])    
+        resultado = buscarUsuarios(usuario, contraseña)
+        
+        return render_template('ejercicio2.html', resultado=resultado)
+    return render_template('ejercicio2.html')
+
+def buscarUsuarios(usuario, contraseña) :
+    if(usuario == "juan" and contraseña == "admin"):
+        return "Bienvenido administrador Juan"
+    elif(usuario == "pepe" and contraseña == "user"):
+        return "Bienvenido usuario pepe"
+    else :
+        return "Usuario o contraseña incorrectos"
+        
 if __name__ == '__main__':
     app.run()

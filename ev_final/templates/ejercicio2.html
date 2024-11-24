@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" type="text/css" href="/static/estilosFormulario.css">
+</head>
+<body>
+<div class="container">
+    <h1>Inicio de sesión</h1>
+    <form action="/ejercicio2" method="POST">
+        <label for="usuario">Ingresa tu nombre :</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br>
+        <label for="contraseña">Ingresa tu contraseña</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    {% if resultado %}
+    <div>
+        <p>{{resultado}}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
