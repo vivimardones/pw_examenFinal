@@ -1,0 +1,42 @@
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #btn1{
+    background-color: #a405a4;
+  }
+
+  #btn2{
+    background-color: #1ac907;
+  }
+
+
+  .button:hover {
+    background-color: #0056b3;
+  }
